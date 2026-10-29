@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it and the original AIRLOCALIZE paper."
+title: "napari-airlocalize: a Python port of AIRLOCALIZE with a napari tuner"
+authors:
+  - family-names: Denes
+    given-names: Lance
+version: 0.1.0
+license: BSD-3-Clause
+repository-code: "https://github.com/lancetdenes/napari-airlocalize"
+references:
+  - type: article
+    title: "A transgenic mouse for in vivo detection of endogenous labeled mRNA"
+    authors:
+      - family-names: Lionnet
+        given-names: Timothée
+      - family-names: Czaplinski
+        given-names: Kevin
+      - family-names: Darzacq
+        given-names: Xavier
+      - family-names: Shav-Tal
+        given-names: Yaron
+      - family-names: Wells
+        given-names: Amy L.
+      - family-names: Chao
+        given-names: Jeffrey A.
+      - family-names: Park
+        given-names: Hye Yoon
+      - family-names: de Turris
+        given-names: Valeria
+      - family-names: Lopez-Jones
+        given-names: Melissa
+      - family-names: Singer
+        given-names: Robert H.
+    journal: "Nature Methods"
+    volume: 8
+    start: 165
+    end: 170
+    year: 2011
+    doi: 10.1038/nmeth.1551

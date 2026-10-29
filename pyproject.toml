@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "napari-airlocalize"
+dynamic = ["version"]
+description = "Python port of AIRLOCALIZE spot detection, with an interactive napari tuner and an HPC batch CLI"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Lance Denes" }]
+keywords = ["napari", "single-molecule", "spot detection", "localization", "microscopy"]
+classifiers = [
+    "Framework :: napari",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "tifffile",
+]
+
+[project.optional-dependencies]
+napari = ["napari[all]>=0.5", "magicgui", "qtpy", "matplotlib"]
+testing = ["pytest"]
+
+[project.entry-points."napari.manifest"]
+napari-airlocalize = "napari_airlocalize:napari.yaml"
+
+[project.scripts]
+airlocalize-batch = "napari_airlocalize.batch:main"
+airlocalize-napari = "napari_airlocalize._widget:main"
+
+[project.urls]
+Source = "https://github.com/lancetdenes/napari-airlocalize"
+"Original AIRLOCALIZE (MATLAB)" = "https://github.com/timotheelionnet/AIRLOCALIZE"
+
+[tool.setuptools.dynamic]
+version = { attr = "napari_airlocalize.__version__" }
+
+[tool.setuptools.package-data]
+napari_airlocalize = ["napari.yaml"]

@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+.DS_Store
+._*
+*.tif
+*.tiff
+!tests/data/*.tif
+*_airlocalize.csv

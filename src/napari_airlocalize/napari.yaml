@@ -1,0 +1,10 @@
+name: napari-airlocalize
+display_name: AIRLOCALIZE
+contributions:
+  commands:
+    - id: napari-airlocalize.tuner
+      python_name: napari_airlocalize._widget:make_tuner_widget
+      title: AIRLOCALIZE Tuner
+  widgets:
+    - command: napari-airlocalize.tuner
+      display_name: AIRLOCALIZE Tuner
